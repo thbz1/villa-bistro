@@ -1,0 +1,1384 @@
+:root {
+	--cor1: #001D38;
+	--cor2: #ffc107;
+	--cor3: #fdca30;
+	--cor4: #cc9a06;
+	--cor5: #02498d;
+	--cor6: #B6DCFF;
+	--cor7: #F9F9FF;
+	--cor8: black;
+	--cor9: white;
+	--cor1-t: rgba(0, 0, 0, 0.5);
+	--cor2-t: rgba(0, 0, 0, 0.6);
+	--cor3-t: rgba(0, 0, 0, 0.8);
+	--cor4-t: rgba(255, 255, 255, 0.5);
+	--cor5-t: rgba(255, 255, 255, 0.803);
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 1.2rem;
+}
+
+h3 {
+	color: var(--cor2);
+	text-shadow: 2px 2px 2px #a17b07;
+	font-family: 'Coming Soon', cursive;
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+#backToTop {
+	display: none;
+	position: fixed;
+	right: 24px;
+	bottom: 24px;
+	z-index: 10;
+	padding: 8px;
+	background-color: var(--cor2);
+	color: var(--cor8);
+	border: none;
+	border-radius: 20%;
+	font-size: 16px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+#backToTop:hover {
+	background-color: var(--cor4);
+}
+
+.navbar {
+	margin-top: -64.5px;
+	transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.navbar.hidden {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.navbar.sticky {
+	background-color: var(--cor1);
+}
+
+.navbar-brand {
+	font-size: 1.6rem;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+	color: var(--cor9);
+	text-shadow: 0 2px 2px var(--cor1-t);
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.navbar-nav .nav-link:focus {
+	color: var(--cor9);
+}
+
+.navbar-nav .nav-link:hover {
+	color: var(--cor9);
+	transition: 0.3s ease;
+	transform: scale(1.05);
+}
+
+.navbar-nav .nav-link.active {
+	color: var(--cor2);
+}
+
+.navbar-toggler {
+	padding: 1px 5px;
+	font-size: 1.5rem;
+}
+
+.navbar-toggler-icon {
+	filter: invert(1); /* Inverte as cores para tornar o ícone branco */
+}
+
+#home {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
+.carousel-inner:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: var(--cor2-t);
+}
+
+.carousel-item {
+	position: relative;
+	height: 100vh;
+	transition: transform 1s ease-in-out;
+}
+
+.carousel-item img {
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.carousel-caption {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+
+.carousel-caption h2 {
+	font-family: 'Coming Soon', cursive;
+	font-size: 5.3rem;
+	letter-spacing: 2px;
+}
+
+.carousel-caption p {
+	width: 60%;
+	margin: auto;
+	font-size: 1.3rem;
+	line-height: 1.9;
+}
+
+.carousel-caption a {
+	margin-top: 4rem;
+	padding: 1rem;
+	text-decoration: none;
+	font-size: 1.25rem;
+	transition: 0.3s linear;
+}
+
+.carousel-caption #btn-menu {
+	color: var(--cor9);
+	border: 2px solid var(--cor9);
+}
+
+.carousel-caption #btn-menu:hover {
+	background-color: var(--cor9);
+	color: var(--cor8);
+	border: none;
+	transform: scale(1.05);
+}
+
+.carousel-caption #btn-reserva {
+	color: var(--cor1);
+	text-shadow: 1px 1px 2px var(--cor4-t);
+	font-weight: 600;
+}
+
+.carousel-caption #btn-reserva:hover {
+	background-color: var(--cor1) !important;
+	color: var(--cor9);
+	box-shadow: 0 4px 8px var(--cor4-t);
+	text-shadow: none;
+	font-weight: 500;
+	transform: scale(1.05);
+}
+
+.carousel .controles {
+	display: none;
+}
+
+.carousel:hover .controles {
+	display: block;
+}
+
+.carousel-indicators {
+	position: absolute;
+	bottom: 5vh;
+}
+
+.carousel-indicators button {
+	max-width: 0.8rem;
+	min-height: 0.8rem;
+	border-radius: 50%;
+}
+
+#about {
+	height: 85vh;
+	background-color: var(--cor7);
+}
+
+#about .row {
+	gap: 1rem;
+}
+
+#about img {
+	transition: transform 0.5s ease;
+}
+
+#about img:hover {
+	transform: scale(1.05);
+}
+
+#cards {
+	height: 80vh;
+	background-color: var(--cor1);
+}
+
+#cards .card {
+	background-color: var(--cor1);
+	color: var(--cor9);
+}
+
+#cards .icon-container {
+	position: relative;
+	width: 40%;
+	margin-inline: auto;
+}
+
+#cards i {
+	position: relative;
+	z-index: 2;
+	padding-left: 10%;
+	color: var(--cor3);
+	font-size: 5rem;
+}
+
+#cards .shadow {
+	position: absolute;
+	top: 45%;
+	left: 40%;
+	transform: translate(-50%, -50%);
+	width: 6rem;
+	height: 6rem;
+	background-color: #5980a7d4;
+}
+
+#cards .fa-solid {
+	padding-block: 20px;
+}
+
+#cards a {
+	color: var(--cor9);
+	text-decoration: none;
+}
+
+#cards p {
+	font-size: 1.1rem;
+}
+
+#cards .card:hover {
+	transition: 0.3s linear;
+	transform: scale(1.02);
+}
+
+#cards .card:hover .card-title a {
+	color: var(--cor3) !important;
+}
+
+#menu .nav-pills .nav-link {
+	color: #8E8E94;
+	border-radius: 0;
+	box-shadow: 0px 4px 15px rgba(169, 169, 169, 0.5);
+	font-weight: 500;
+	transition: transform 0.3s ease;
+	transform-origin: center bottom;
+}
+
+#menu .nav-pills .nav-link:focus,
+#menu .nav-pills .nav-link.active {
+	background-color: var(--cor2);
+	color: var(--cor1);
+	transform: scale(1.05);
+}
+
+#pad-menu {
+	padding: 4rem;
+}
+
+#menu p {
+	font-size: 0.9rem;
+}
+
+#menu .card,
+#blog .card {
+	overflow: hidden;
+}
+
+#menu h4 {
+	font-size: 1.2rem;
+}
+
+#menu .card-img {
+	border-radius: 0;
+}
+
+#menu .card:hover .card-img {
+	transition: 0.3s linear;
+	transform: scale(1.02);
+}
+
+#menu .card-body {
+	background-color: var(--cor7);
+}
+
+#menu .card:hover .card-body {
+	background-color: var(--cor2);
+	transition: 0.3s linear;
+}
+
+.parallax {
+	display: flex;
+	position: relative;
+	justify-content: center;
+	align-items: center;
+	height: 60vh;
+	background: url('images/parallax.jpg') no-repeat fixed center/cover;
+	color: var(--cor9);
+	text-align: center;
+}
+
+.parallax:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background-color: var(--cor2-t);
+}
+
+.parallax-content {
+	z-index: 2;
+}
+
+#reservations {
+	height: 90vh;
+	background-color: rgba(79, 79, 216, 0.1);
+}
+
+#reservations img {
+	border: 6px solid #ffc107;
+	box-shadow: 0 0 20px var(--cor2-t);
+	transition: 0.3s linear;
+}
+
+#reservations img:hover {
+	transform: scale(1.02);
+}
+
+#reservations h3 {
+	color: var(--cor1);
+	text-shadow: 2px 2px 2px var(--cor5);
+}
+
+#reservations button {
+	width: 50%;
+	background-color: var(--cor2);
+	font-size: 1.1rem;
+	font-weight: 600;
+	transition: 0.3s ease;
+}
+
+#reservations button:hover {
+	background-color: var(--cor5);
+	color: var(--cor9);
+	border: 2px solid var(--cor2);
+	font-weight: normal;
+	transform: scale(1.05);
+}
+
+#events .carousel-inner:before {
+	background-color: var(--cor3-t);
+}
+
+.carousel-title {
+	position: absolute;
+	top: 60px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+}
+
+#events .contentEvent {
+	background-color: var(--cor9);
+	color: var(--cor8);
+	border-radius: 15px 0 0 15px;
+	box-shadow: 0px 0px 18px var(--cor5-t);
+}
+
+#events h4 {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+#events .carousel-caption p {
+	width: 80%;
+	font-size: 1rem;
+}
+
+#events .carousel-caption a {
+	color: var(--cor5);
+	text-decoration: none;
+	transition: 0.3s linear;
+}
+
+#events .imgEvent {
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0px 0px 18px var(--cor5-t);
+}
+
+#events img {
+	border-radius: 0 15px 15px 0;
+	object-fit: cover;
+}
+
+#events .controles {
+	display: block;
+}
+
+#events .carousel-indicators {
+	bottom: 8vh;
+}
+
+#events .carousel-indicators button {
+	max-width: 0.6rem;
+	min-height: 0.6rem;
+	border-radius: 50%;
+}
+
+#reviews {
+	height: 100vh;
+	background: url(images/bg-reviews.jpg) no-repeat center/cover;
+}
+
+#reviews .carousel-inner:before {
+	background-color: transparent;
+}
+
+#reviews .contentReviews {
+	color: var(--cor8);
+}
+
+#reviews img {
+	max-height: 100px;
+	box-shadow: 0px 0px 10px var(--cor3-t);
+}
+
+#reviews .carousel-caption p {
+	width: 90%;
+	background-color: rgba(255, 255, 255, 0.592);
+	border-radius: 5px;
+	font-size: 1rem;
+}
+
+#reviews .icone {
+	max-width: 32px;
+	max-height: 32px;
+	background-color: var(--cor1-t);
+}
+
+#reviews .controles {
+	display: block;
+}
+
+#reviews .carousel-control-prev {
+	position: absolute;
+	top: 50%; 
+	left: 0;
+	transform: translateY(-50%);
+}
+
+#reviews .carousel-control-next {
+	position: absolute;
+	top: 50%; 
+	right: 28.3%;
+	z-index: 2;
+	transform: translate(-50%, -50%);
+}
+
+#reviews .carousel-indicators {
+	position: absolute;
+	bottom: 110px;
+	left: 17%;
+	transform: translateX(-50%);
+}
+
+#reviews .indicador {
+	background-color: var(--cor1);
+	border: 3px solid var(--cor2);
+}
+
+#blog {
+	height: 100vh;
+	background-color: #FAFAFA;
+}
+
+#blog img {
+	transition: 0.3s linear;
+}
+
+#blog .card:hover img {
+	transform: scale(1.02);
+}
+
+#blog .card-text {
+	font-size: 1rem;
+}
+
+#blog .btn {
+	background-color: var(--cor5);
+	color: var(--cor9);
+}
+
+#blog .btn:hover {
+	border: 2px solid var(--cor5);
+	background-color: var(--cor9);
+	color: var(--cor5);
+}
+
+#blog .barra {
+	width: 85%;
+	height: 4px;
+	margin-inline: auto;
+	background-color: rgba(169, 169, 169, 0.2);
+}
+
+#blog .card:hover~.barra {
+	background-color: var(--cor2);
+}
+
+footer {
+	flex-wrap: wrap;
+	height: 80vh;
+	background-color: var(--cor1);
+	color: var(--cor9);
+}
+
+footer .row {
+	width: 100%;
+	margin-inline: 7rem;
+}
+
+footer h4 {
+	font-weight: 400;
+}
+
+footer p {
+	color: var(--cor6);
+	font-size: 0.9rem;
+	line-height: 1.7rem;
+}
+
+footer #redes i {
+	margin-right: 8px;
+	padding: 6px;
+	background-color: #002e5a;
+	border-radius: 8px;
+	transition: 0.3s ease;
+}
+
+footer #redes i:hover {
+	background-color: var(--cor4);
+	transform: scale(1.1);
+}
+
+footer #address i {
+	color: var(--cor6);
+}
+
+footer #address p {
+	display: inline;
+}
+
+footer .form-control {
+	padding-block: 0.7rem;
+}
+
+footer .btn {
+	background-color: var(--cor2);
+	font-weight: bold;
+	transition: 0.3s ease;
+}
+
+footer .btn:hover {
+	background-color: var(--cor4);
+	color: var(--cor8);
+}
+
+footer .linha {
+	width: 70%;
+	margin-top: -100px;
+}
+
+footer hr {
+	height: 2px;
+	margin: auto;
+	background-color: var(--cor9);
+	border: 0;
+}
+
+@media (max-width: 450px) {
+	h3 {
+		font-size: 2rem;
+	}
+
+	#offcanvasNavbar {
+		width: 60%;
+	}
+
+	.navbar-nav .nav-link {
+		font-size: 0.9rem;
+	}
+
+	.carousel-caption h2 {
+		font-size: 2.5rem;
+	}
+
+	.carousel-caption p {
+		width: 100%;
+		font-size: 1rem;
+	}
+
+	.box-btn {
+		display: flex;
+	}
+
+	.carousel-caption a {
+		margin-top: 2rem;
+		padding: 0.4rem;
+		font-size: 0.8rem;
+	}
+
+	.carousel-caption #btn-menu {
+		margin-right: 0.2rem;
+	}
+
+	.carousel-caption #btn-reserva {
+		padding-top: 0.5rem;
+	}
+
+	#home .carousel-indicators {
+		bottom: 12vh;
+	}
+
+	.carousel-indicators button {
+		max-width: 0.5rem;
+		min-height: 0.5rem;
+	}
+
+	#about,
+	#cards,
+	#reservations,
+	#blog,
+	footer {
+		height: auto;
+	}
+
+	#about .container,
+	#menu .container,
+	#blog .container {
+		padding-inline: 1.2rem !important;
+	}
+
+	#about p,
+	#cards p,
+	#menu a,
+	#reservations button,
+	#blog p {
+		font-size: 1rem;
+	}
+
+	#cards i {
+		font-size: 4rem;
+	}
+
+	#cards .shadow {
+		left: 36%;
+		width: 5rem;
+		height: 5rem;
+	}
+
+	#cards h4 {
+		font-size: 1.25rem;
+	}
+
+	#menu h3 {
+		font-size: 1.75rem;
+		text-align: center;
+	}
+
+	#menu p {
+		text-align: center;
+	}
+
+	#menu .nav-item {
+		margin: 0 !important;
+	}
+
+	#menu img {
+		max-height: 200px;
+		object-fit: cover;
+	}
+
+	#menu #quiche {
+		object-position: bottom center;
+	}
+
+	#menu #pina {
+		object-position: top center;
+	}
+
+	.parallax {
+		height: 40vh;
+	}
+
+	.parallax h3 {
+		font-size: 1.75rem;
+	}
+
+	.parallax p {
+		font-size: 1rem;
+	}
+
+	#reservations .px-2 {
+		padding-block: 70px;
+	}
+
+	#reservations button {
+		width: 55%;
+	}
+
+	#events,
+	#events .carousel-inner:before {
+		height: 90vh;
+	}
+
+	#events .carousel-caption,
+	#reviews .carousel-caption {
+		top: 45%;
+	}
+
+	#events .contentEvent {
+		border-radius: 15px 15px 0 0;
+	}
+
+	#events h4 {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+
+	#events .imgEvent {
+		border-radius: 0 0 15px 15px;
+	}
+	
+	#events img {
+		border-radius: 0 0 15px 15px;
+	}
+
+	#events .controles {
+		display: none;
+	}
+
+	#events .carousel-indicators {
+		bottom: 12vh;
+	}
+
+	#reviews {
+		height: 90vh;
+	}
+
+	#reviews .carousel-caption p {
+		width: 100%;
+	}
+
+	#reviews .icone {
+		max-width: 24px;
+		max-height: 24px;
+	}
+	
+	#reviews .carousel-control-next {
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	#reviews .carousel-indicators {
+		left: 35%;
+		bottom: 9vh;
+	}
+
+	#blog .blog-title {
+		margin: 40px 20px 0 20px;
+	}
+
+	footer .row {
+		margin-inline: 2rem;
+	}
+
+	footer #redes,
+	footer #horarios,
+	footer #address,
+	footer #newsletter {
+		width: 91%;
+	}
+
+	footer #horarios p {
+		padding-right: 30%;
+	}
+
+	footer .linha {
+		margin-top: -50px;
+	}
+}
+
+@media (min-width: 451px) and (max-width: 670px) {
+	#offcanvasNavbar {
+		width: 50%;
+	}
+
+	.carousel-caption h2 {
+		font-size: 3.5rem;
+	}
+
+	.carousel-caption p {
+		width: 100%;
+		font-size: 1.1rem;
+	}
+
+	.carousel-caption a {
+		margin-top: 2rem;
+		padding: 0.7rem;
+		font-size: 1rem;
+	}
+
+	.carousel-caption #btn-menu:hover,
+	.carousel-caption #btn-reserva:hover {
+		transform: none;
+	}
+
+	#home .carousel-indicators {
+		bottom: 8vh;
+	}
+
+	.carousel-indicators button {
+		max-width: 0.6rem;
+		min-height: 0.6rem;
+	}
+
+	#about,
+	#cards,
+	#reservations,
+	#reviews,
+	#blog,
+	footer {
+		height: auto;
+	}
+
+	#about .container,
+	#blog .container {
+		padding-inline: 1.2rem !important;
+	}
+
+	#about p,
+	#blog p {
+		font-size: 1.1rem;
+	}
+
+	#menu .container {
+		max-width: none;
+		padding-inline: 3.5rem !important;
+	}
+
+	#menu img {
+		max-height: 300px;
+		object-fit: cover;
+	}
+
+	#reservations .px-2 {
+		padding-block: 70px;
+	}
+	
+	#reservations img {
+		max-height: 500px;
+		object-fit: cover;
+	}
+
+	#reservations .mb-2 {
+		max-width: 80%;
+	}
+	
+	#reservations button {
+		width: 50%;
+	}
+
+	#events,
+	#events .carousel-inner:before {
+		height: 90vh;
+	}
+
+	#events .carousel-caption {
+		top: 45%;
+		max-width: 350px;
+		margin: 0 auto;
+	}
+
+	#events .contentEvent {
+		border-radius: 15px 15px 0 0;
+	}
+
+	#events h4 {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+
+	#events .carousel-caption p {
+		width: 100%;
+		font-size: 0.9rem;
+	}
+
+	#events .imgEvent {
+		border-radius: 0 0 15px 15px;
+	}
+	
+	#events img {
+		border-radius: 0 0 15px 15px;
+	}
+
+	#events .carousel-indicators {
+		bottom: 5vh;
+	}
+
+	#reviews .carousel-caption {
+		bottom: 50px;
+	}
+
+	#reviews .carousel-caption p {
+		width: 100%;
+	}
+
+	#reviews .icone {
+		max-width: 24px;
+		max-height: 24px;
+	}
+	
+	#reviews .carousel-control-next {
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	#reviews .carousel-indicators {
+		bottom: 70px;
+		left: 35%;
+	}
+
+	#blog .blog-title {
+		margin: 40px 20px 0 20px;
+	}
+
+	footer .row {
+		margin-inline: 2rem;
+	}
+
+	footer #redes,
+	footer #horarios,
+	footer #address,
+	footer #newsletter {
+		width: 80%;
+	}
+
+	footer #horarios p {
+		padding-right: 40%;
+	}
+
+	footer .linha {
+		margin-top: -50px;
+	}
+}
+
+@media (min-width: 671px) and (max-width: 768px) {
+	#offcanvasNavbar {
+		width: 40%;
+	}
+
+	.carousel-caption h2 {
+		font-size: 4rem;
+	}
+
+	.carousel-caption p {
+		width: 90%;
+		font-size: 1.1rem;
+	}
+
+	.carousel-caption a {
+		margin-top: 2rem;
+		padding: 0.7rem;
+		font-size: 1.1rem;
+	}
+
+	#home .carousel-indicators {
+		bottom: 6vh;
+	}
+
+	.carousel-indicators button {
+		max-width: 0.6rem;
+		min-height: 0.6rem;
+	}
+
+	#about,
+	#cards,
+	#reservations,
+	#reviews,
+	#blog,
+	footer {
+		height: auto;
+	}
+
+	#about .container {
+		max-width: none;
+		padding-inline: 3.5rem !important;
+	}
+
+	#about p {
+		font-size: 1.1rem;
+	}
+
+	#menu .container {
+		max-width: none;
+		padding-inline: 5.5rem !important;
+	}
+
+	#menu img {
+		max-height: 400px;
+		object-fit: cover;
+	}
+
+	#reservations .px-2 {
+		padding-block: 70px;
+	}
+	
+	#reservations img {
+		max-height: 400px;
+		object-fit: cover;
+	}
+
+	#reservations .mb-2 {
+		max-width: 50%;
+	}
+	
+	#reservations button {
+		width: 45%;
+	}
+
+	#events,
+	#events .carousel-inner:before {
+		height: 90vh;
+	}
+
+	#events .carousel-caption {
+		top: 45%;
+		max-width: 350px;
+		margin: 0 auto;
+	}
+
+	#events .contentEvent {
+		border-radius: 15px 15px 0 0;
+	}
+
+	#events h4 {
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+	}
+
+	#events .carousel-caption p {
+		width: 100%;
+		font-size: 0.9rem;
+	}
+
+	#events .imgEvent {
+		border-radius: 0 0 15px 15px;
+	}
+	
+	#events img {
+		border-radius: 0 0 15px 15px;
+	}
+
+	#events .carousel-indicators {
+		bottom: 5vh;
+	}
+	
+	#reviews .carousel-control-next {
+		right: 0;
+		transform: translateY(-50%);
+	}
+
+	#reviews .carousel-indicators {
+		left: 35%;
+	}
+
+	#blog .blog-title {
+		margin: 40px 20px 0 20px;
+	}
+
+	footer .row {
+		margin-inline: 2rem;
+	}
+
+	footer #redes,
+	footer #horarios,
+	footer #address,
+	footer #newsletter {
+		width: 65%;
+	}
+
+	footer #horarios p {
+		padding-right: 50%;
+	}
+
+	footer .linha {
+		margin-top: -50px;
+	}
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+	#offcanvasNavbar {
+		width: 30%;
+	}
+
+	.carousel-caption h2 {
+		font-size: 3.5rem;
+	}
+
+	.carousel-caption p {
+		width: 80%;
+		font-size: 1.15rem;
+	}
+
+	.carousel-caption a {
+		margin-top: 2rem;
+		padding: 0.7rem;
+		font-size: 1.1rem;
+	}
+
+	#home .carousel-indicators {
+		bottom: 7vh;
+	}
+
+	.carousel-indicators button {
+		max-width: 0.6rem;
+		min-height: 0.6rem;
+	}
+
+	#about,
+	#cards,
+	#reservations,
+	#events,
+	#reviews,
+	#blog,
+	footer {
+		height: auto;
+	}
+
+	#about .container,
+	#menu .container {
+		max-width: 850px;
+		padding-inline: 3.5rem !important;
+	}
+
+	#reservations .px-2 {
+		padding-block: 70px;
+	}
+	
+	#reservations img {
+		max-height: 400px;
+		object-fit: cover;
+	}
+	
+	#reservations button {
+		width: 40%;
+	}
+
+	#events .carousel-caption {
+		top: 45%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	#events .contentEvent {
+		border-radius: 15px 15px 0 0;
+	}
+
+	#events .carousel-caption p {
+		width: 100%;
+		font-size: 0.9rem;
+	}
+
+	#events .imgEvent {
+		border-radius: 0 0 15px 15px;
+	}
+	
+	#events .imgEvent img {
+		max-height: 200px;
+		border-radius: 0 0 15px 15px;
+	}
+
+	#events .carousel-indicators {
+		display: none;
+	}
+
+	#reviews .carousel-caption {
+		bottom: 50px;
+	}
+
+	#reviews .carousel-caption p {
+		width: 100%;
+		background-color: transparent;
+	}
+
+	#reviews .carousel-indicators {
+		bottom: 50px;
+	}
+
+	#blog .blog-title {
+		margin: 40px 20px 0 20px;
+	}
+
+	footer #horarios p {
+		padding-right: 30%;
+	}
+
+	footer .linha {
+		margin-top: -20px;
+	}
+}
+
+@media (min-width: 1001px) and (max-width: 1400px) {
+	.carousel-caption h2 {
+		font-size: 4rem;
+	}
+
+	.carousel-caption p {
+		width: 60%;
+		font-size: 1.15rem;
+	}
+
+	.carousel-caption a {
+		margin-top: 2rem;
+		padding: 0.7rem;
+		font-size: 1.1rem;
+	}
+
+	#home .carousel-indicators {
+		bottom: 5vh;
+	}
+
+	.carousel-indicators button {
+		max-width: 0.6rem;
+		min-height: 0.6rem;
+	}
+
+	#about,
+	#cards,
+	#reservations,
+	#events,
+	#reviews,
+	#blog,
+	footer {
+		height: auto;
+	}
+
+	#about .container {
+		max-width: none;
+	}
+
+	#events .carousel-caption {
+		top: 45%;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	#events .contentEvent {
+		max-height: 220px;
+		border-radius: 15px 15px 0 0;
+	}
+
+	#events .carousel-caption p {
+		width: 90%;
+	}
+
+	#events .imgEvent {
+		border-radius: 0 0 15px 15px;
+	}
+	
+	#events .imgEvent img {
+		max-height: 200px;
+		border-radius: 0 0 15px 15px;
+	}
+
+	#events .carousel-indicators {
+		display: none;
+	}
+
+	#reviews .carousel-caption {
+		bottom: 80px;
+	}
+
+	#reviews .carousel-caption p {
+		width: 100%;
+		background-color: transparent;
+	}
+
+	#reviews .carousel-indicators {
+		bottom: 70px;
+	}
+
+	#blog .blog-title {
+		margin: 40px 20px 0 20px;
+	}
+
+	footer .row {
+		margin-inline: 5rem;
+	}
+
+	footer #redes,
+	footer #horarios,
+	footer #address,
+	footer #newsletter {
+		width: 40%;
+	}
+
+	footer #horarios p {
+		padding-right: 30%;
+	}
+
+	footer .linha {
+		margin-top: -10px;
+	}
+}
+
+@media (min-width: 1400px) {
+	#events .contentEvent {
+		max-height: 305px;
+	}
+
+	#events .imgEvent img {
+		min-height: 300px;
+	}
+
+	#reviews img {
+		max-height: 150px;
+	}
+
+	#reviews .carousel-caption p {
+		width: 100%;
+		background-color: transparent;
+		font-size: 1.2rem;
+	}
+
+	#reviews .carousel-indicators {
+		bottom: 8vh;
+	}
+}

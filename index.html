@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Bistrô</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <button id="backToTop" class="btn">
+        <i class="bi bi-chevron-double-up"></i>
+    </button>
+	<header class="navbar navbar-expand-lg sticky-top shadow">
+		<nav class="container">
+			<a class="navbar-brand fw-bold text-white" href="#home"><span class="text-warning">Villa </span>Bistrô</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+			<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" data-bs-theme="dark">
+				<div class="offcanvas-header">
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<div class="offcanvas-body">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="#home">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">Sobre</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#menu">Menu</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#reservations">Reservas</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#events">Eventos</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#reviews">Reviews</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#blog">Blog</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<div data-bs-spy="scroll" data-bs-target="#offcanvasNavbar" data-bs-smooth-scroll="true">
+		<div id="home" class="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
+			<!--Itens do Carrossel-->
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="images/sabor-incomparavel.jpg" class="d-block w-100" alt="Prato com comida">
+					<div class="carousel-caption d-flex flex-column align-items-center">
+						<h2 class="mb-4">Sabor <span class="text-warning">Incomparável</span></h2>
+						<p>Descubra pratos exclusivos preparados com ingredientes frescos e de qualidade</p>
+						<div class="box-btn">
+							<a id="btn-menu" type="button" class="mx-sm-2 rounded fst-italic" href="#menu">Confira o Menu</a>
+							<a id="btn-reserva" type="button" class="mx-sm-2 border-0 rounded bg-warning fst-italic" href="#reservations">Faça sua Reserva</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/bistro-carousel.jpg" class="d-block w-100" alt="Ambiente de restaurante">
+					<div class="carousel-caption d-flex flex-column align-items-center">
+						<h2 class="mb-4">Ambiente <span class="text-warning">Aconchegante</span></h2>
+						<p>Desfrute de um espaço elegante e acolhedor, perfeito para qualquer ocasião</p>
+						<div class="box-btn">
+							<a id="btn-menu" type="button" class="mx-sm-2 rounded fst-italic" href="#menu">Confira o Menu</a>
+							<a id="btn-reserva" type="button" class="mx-sm-2 border-0 rounded bg-warning fst-italic" href="#reservations">Faça sua Reserva</a>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/experiencia-unica.jpg" class="d-block w-100" alt="Prato com comida">
+					<div class="carousel-caption d-flex flex-column align-items-center">
+						<h2 class="mb-4">Experiência <span class="text-warning">Única</span></h2>
+						<p>Viva momentos inesquecíveis com atendimento personalizado e sabores surpreendentes</p>
+						<div class="box-btn">
+							<a id="btn-menu" type="button" class="mx-sm-2 rounded fst-italic" href="#menu">Confira o Menu</a>
+							<a id="btn-reserva" type="button" class="mx-sm-2 border-0 rounded bg-warning fst-italic" href="#reservations">Faça sua Reserva</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Controles do Carrossel-->
+			<button class="carousel-control-prev controles" type="button" data-bs-target="#home" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next controles" type="button" data-bs-target="#home" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+			<!--Indicadores do Carrossel-->
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#home" data-bs-slide-to="0" class="active" aria-label="Slide 1">
+				</button>
+				<button class="mx-2" type="button" data-bs-target="#home" data-bs-slide-to="1" aria-label="Slide 2">
+				</button>
+				<button type="button" data-bs-target="#home" data-bs-slide-to="2" aria-label="Slide 3">
+				</button>
+			</div>
+		</div>
+
+		<section id="about" class="d-flex align-items-center">
+            <div class="row container justify-content-center align-items-center mx-auto p-5">
+                <div class="col-lg-5 text-center">
+                    <h3 class="mb-5">Nossa Essência</h3>
+                    <p>
+                        No Villa Bistrô, unimos tradição e inovação para oferecer uma culinária autêntica e cheia de personalidade.
+                    </p>
+                    <p>
+                        Nosso ambiente foi cuidadosamente projetado para proporcionar momentos de prazer e descontração, seja para um jantar a dois ou uma celebração especial.
+                    </p>
+                    <p>
+                        Com atenção aos detalhes e dedicação em cada preparo, estamos aqui para transformar sua refeição em uma experiência inesquecível!
+                    </p>
+                </div>
+                <div class="col-lg-5 p-1" style="overflow: hidden;">
+                    <img src="images/sobre.jpg" class="img-fluid rounded" alt="Chefs na cozinha">
+                </div>
+            </div>
+		</section>
+
+		<section id="cards" class="d-flex align-items-center">
+			<div class="row container mx-auto p-5">
+				<div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+					<div class="card p-3 text-center border-0">
+						<div class="icon-container">
+							<i class="bi bi-journal-text"></i>
+							<div class="shadow rounded-circle"></div>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title mb-4"><a href="#menu">Menu Sazonal</a></h4>
+							<p class="card-text">
+								Menu inspirado nas estações, com pratos frescos e ingredientes da época.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+					<div class="card p-3 text-center border-0">
+						<div class="icon-container">
+							<i class="fa-solid fa-wine-glass"></i>
+							<div class="shadow rounded-circle"></div>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title mb-4"><a href="#home">Carta de Vinhos</a></h4>
+							<p class="card-text">
+								Vinhos selecionados para harmonizar perfeitamente com nossos pratos.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+					<div class="card p-3 text-center border-0">
+						<div class="icon-container">
+							<i class="fa-solid fa-leaf"></i>
+							<div class="shadow rounded-circle"></div>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title mb-4"><a href="#home">Sustentabilidade</a></h4>
+							<p class="card-text">
+								Priorizamos práticas sustentáveis, como o uso de produtos orgânicos.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 mb-3 mb-lg-0">
+					<div class="card p-3 text-center border-0">
+						<div class="icon-container">
+							<i class="fa-solid fa-paw"></i>
+							<div class="shadow rounded-circle"></div>
+						</div>
+						<div class="card-body">
+							<h4 class="card-title mb-4"><a href="#home">Pet Friendly</a></h4>
+							<p class="card-text">
+								Acolhemos seus pets para que toda a família aproveite a refeição conosco.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="menu" class="d-flex align-items-center">
+			<div id="pad-menu" class="container mx-auto">
+				<div class="mb-5">
+					<h3>Sabores que Encantam</h3>
+					<p class="mt-3 fs-6">Explore o nosso menu repleto de opções irresistíveis, pensadas para encantar seu paladar a cada mordida.</p>
+				</div>
+				<ul class="nav nav-pills justify-content-center my-3">
+					<li class="nav-item mx-2" role="presentation">
+						<a class="nav-link active p-3" id="starters-tab" data-bs-toggle="tab" href="#starters" aria-controls="starters" aria-current="true">Entradas</a>
+					</li>
+					<li class="nav-item mx-2" role="presentation">
+						<a class="nav-link p-3" id="lunch-tab" data-bs-toggle="tab" href="#lunch" aria-controls="lunch">Almoço</a>
+					</li>
+					<li class="nav-item mx-2" role="presentation">
+						<a class="nav-link p-3" id="snacks-tab" data-bs-toggle="tab" href="#snacks" aria-controls="snacks">Porções</a>
+					</li>
+					<li class="nav-item mx-2" role="presentation">
+						<a class="nav-link p-3" id="dinner-tab" data-bs-toggle="tab" href="#dinner" aria-controls="dinner">Jantar</a>
+					</li>
+					<li class="nav-item mx-2" role="presentation">
+						<a class="nav-link p-3" id="dessert-tab" data-bs-toggle="tab" href="#dessert" aria-controls="dessert">Doces</a>
+					</li>
+					<li class="nav-item mx-2" role="presentation">
+						<a class="nav-link p-3" id="drinks-tab" data-bs-toggle="tab" href="#drinks" aria-controls="drinks">Drinks</a>
+					</li>
+				</ul>
+			
+				<div class="tab-content mt-4" id="myTabContent">
+					<div class="tab-pane fade show active pt-2" id="starters" aria-labelledby="starters-tab">
+						<div class="row">
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/bruschetta.jpg" class="card-img img-fluid" alt="Bruschettas">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Bruschetta de Tomate e Manjericão</h4>
+										<p class="card-text">
+											Fatias de pão italiano tostado com tomate picado, manjericão fresco e azeite de oliva.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/crostini-brie.jpg" class="card-img img-fluid" alt="Crostini">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Crostini de Brie com Geleia de Damasco</h4>
+										<p class="card-text">
+											Pão crocante coberto com queijo brie cremoso e geleia de damasco.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/mini-quiches.jpg" class="card-img img-fluid" alt="Mini quiches">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Porção de Quiches de Queijo e Presunto</h4>
+										<p class="card-text">
+											Quiches crocantes recheadas com queijo, presunto e finalizadas com cheiro-verde.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/burrata.jpg" class="card-img img-fluid" alt="Burrata">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Burrata com Presunto de Parma e Figos</h4>
+										<p class="card-text">
+											Burrata, presunto de Parma e figos, criando uma entrada sofisticada.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/espetinhos-frango.jpg" class="card-img img-fluid" alt="Espetinhos de frango">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Espetinhos de Frango Empanado com Molho Tártaro</h4>
+										<p class="card-text">
+											Espetos de frango empanado, marinados com especiarias e molho tártaro.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/carpaccio.jpg" class="card-img img-fluid" alt="Carpaccio">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Carpaccio de Carne com Parmesão e Alcaparras</h4>
+										<p class="card-text">
+											Fatias finas de carne bovina com lascas de parmesão, alcaparras e azeite trufado.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade pt-2" id="lunch" aria-labelledby="lunch-tab">
+						<div class="row">
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/salada.jpg" class="card-img img-fluid" alt="Salada">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Salada Mediterrânea</h4>
+										<p class="card-text">
+											Mistura fresca de alface, tomates cereja, azeitonas, pepino e queijo feta, regada com azeite de oliva e vinagre balsâmico.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/carne-com-polenta.jpg" class="card-img img-fluid" alt="Carne com polenta">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Carne de Panela com Polenta</h4>
+										<p class="card-text">
+											Carne cozida lentamente com legumes e temperos, acompanhada de polenta cremosa e queijo parmesão.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/quiche-almoco.jpg" class="card-img img-fluid" id="quiche" alt="Quiche">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Quiche de Legumes e Queijo Brie</h4>
+										<p class="card-text">
+											Uma quiche leve e saborosa, recheada com legumes frescos e queijo brie, acompanhada de uma salada verde.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/frango-grelhado.jpg" class="card-img img-fluid" alt="Frango grelhado">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Filé de Frango Grelhado com Molho de Mostarda</h4>
+										<p class="card-text">
+											Peito de frango grelhado servido com molho cremoso de mostarda e mel, acompanhado de arroz e legumes salteados.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/ravioli.jpg" class="card-img img-fluid" alt="Ravioli">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Ravioli de Queijo com Molho de Tomate e Manjericão</h4>
+										<p class="card-text">
+											Massa fresca recheada com queijo ricota e espinafre, servida com molho de tomate caseiro e manjericão fresco.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/sanduiche.jpg" class="card-img img-fluid" alt="Sanduiche">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Sanduíche de Filé Mignon com Molho Chimichurri</h4>
+										<p class="card-text">
+											Pão rústico com filé mignon grelhado, cebola caramelizada e molho chimichurri, servido com batatas fritas crocantes.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade pt-2" id="snacks" aria-labelledby="snacks-tab">
+						<div class="row">
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/batatas-rusticas.jpg" class="card-img img-fluid" alt="Batatas rústicas">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Batatas Rústicas com Aioli</h4>
+										<p class="card-text">
+											Batatas assadas com casca, crocantes por fora e macias por dentro, servidas com um molho aioli caseiro.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/aneis-de-cebola.jpg" class="card-img img-fluid" alt="Anéis de cebola">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Anéis de Cebola Empanados</h4>
+										<p class="card-text">
+											Cebolas empanadas e fritas, crocantes por fora e macias por dentro, acompanhadas de molho barbecue.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/pao-de-alho.jpg" class="card-img img-fluid" alt="Pão de alho">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Pão de Alho com Queijo</h4>
+										<p class="card-text">
+											Fatias de pão de alho recheadas com queijo derretido, servidas como aperitivo perfeito para acompanhar a refeição.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/croquete.jpg" class="card-img img-fluid" alt="Croquete">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Croquetes de Carne Seca com Molho de Pimenta</h4>
+										<p class="card-text">
+											Croquetes crocantes e recheados com carne seca desfiada, acompanhados de um molho de pimenta.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/queijo-com-mel.jpg" class="card-img img-fluid" alt="Queijo com mel">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Queijo Coalho Grelhado com Mel e Ervas</h4>
+										<p class="card-text">
+											Queijo coalho grelhado, servido com um toque de mel e ervas frescas. Uma opção leve e deliciosa para começar a refeição.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/mandioca.jpg" class="card-img img-fluid" alt="Mandioca">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Mandioca Frita com Molho de Alho e Ervas</h4>
+										<p class="card-text">
+											Pedaços de mandioca frita, crocantes e servidas com um molho cremoso de alho e ervas frescas.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade pt-2" id="dinner" aria-labelledby="dinner-tab">
+						<div class="row">
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/file.jpg" class="card-img img-fluid" alt="Filé">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Filé Mignon ao Molho de Vinho Tinto</h4>
+										<p class="card-text">
+											Corte nobre de carne grelhado no ponto ideal, servido com molho de vinho tinto, purê de batata trufado e legumes assados.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/peixe.jpg" class="card-img img-fluid" alt="Peixe">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Peixe do Dia Grelhado com Purê de Mandioquinha</h4>
+										<p class="card-text">
+											Peixe fresco do dia grelhado, acompanhado de purê de mandioquinha cremoso e uma salsa de tomate e ervas frescas.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/lombo.jpg" class="card-img img-fluid" alt="Lombo">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Lombo de Porco com Molho de Laranja e Alecrim</h4>
+										<p class="card-text">
+											Lombo assado servido com molho agridoce de laranja e alecrim, acompanhado de arroz de amêndoas e legumes salteados.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/risoto.jpg" class="card-img img-fluid" alt="Risoto">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Risoto de Cogumelos Trufados</h4>
+										<p class="card-text">
+											Arroz arbóreo cremoso com cogumelos frescos, um toque de azeite trufado e parmesão.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/cordeiro.jpg" class="card-img img-fluid" alt="Cordeiro">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Cordeiro ao Molho de Hortelã</h4>
+										<p class="card-text">
+											Costeletas de cordeiro assadas, servidas com um molho de hortelã, acompanhadas de purê de batata-doce.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/gnocchi.jpg" class="card-img img-fluid" alt="Gnocchi">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Gnocchi de Batata com Pesto</h4>
+										<p class="card-text">
+											Gnocchis de batata macios, servidos com molho pesto fresco, nozes crocantes e um toque de queijo parmesão.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade pt-2" id="dessert" aria-labelledby="dessert-tab">
+						<div class="row">
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/tiramisu.jpg" class="card-img img-fluid" alt="Tiramisu">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Tiramisu Clássico</h4>
+										<p class="card-text">
+											Camadas de biscoito champagne embebido em café e creme de mascarpone, finalizado com cacau em pó.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/creme-brulee.jpg" class="card-img img-fluid" alt="Creme Brulee">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Crème Brûlée</h4>
+										<p class="card-text">
+											Creme de baunilha suave e cremoso, delicadamente coberto com uma crosta de açúcar caramelizado.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/fondue-chocolate.jpg" class="card-img img-fluid" alt="Fondue de chocolate">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Fondue de Chocolate</h4>
+										<p class="card-text">
+											Chocolate meio amargo derretido, servido com frutas frescas e marshmallows para mergulhar.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/panna-cotta.jpg" class="card-img img-fluid" alt="Panna cotta">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Panna Cotta de Baunilha com Calda de Framboesa</h4>
+										<p class="card-text">
+											Delicada sobremesa italiana de baunilha, servida com uma calda fresca de framboesas.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/brownie-com-sorvete.jpg" class="card-img img-fluid" alt="Brownie com sorvete">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Brownie de Chocolate com Sorvete de Creme</h4>
+										<p class="card-text">
+											Brownie quente, servido com uma bola de sorvete de creme, finalizado com calda de chocolate.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/cheesecake.jpg" class="card-img img-fluid" alt="Cheesecake">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Cheesecake Cremoso de Frutas Vermelhas</h4>
+										<p class="card-text">
+											Base crocante de biscoito, recheio cremoso de cream cheese e cobertura de frutas vermelhas frescas.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade pt-2" id="drinks" aria-labelledby="drinks-tab">
+						<div class="row">
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/caipirinha.jpg" class="card-img img-fluid" alt="Caipirinha">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Caipirinha</h4>
+										<p class="card-text">
+											A clássica mistura de cachaça, limão, açúcar e gelo, refrescante e perfeita para acompanhar os pratos.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/pina-colada.jpg" class="card-img img-fluid" id="pina" alt="Piña colada">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Piña Colada</h4>
+										<p class="card-text">
+											Rum branco, leite de coco, suco de abacaxi e gelo, criando uma bebida cremosa e tropical, com sabor doce e refrescante.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/moscow-mule.jpg" class="card-img img-fluid" alt="Moscow mule">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Moscow Mule</h4>
+										<p class="card-text">
+											
+											Vodca, cerveja de gengibre e limão fresco, combinando sabores cítricos e picantes em uma bebida marcante.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/mojito.jpg" class="card-img img-fluid" alt="Mojito">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Mojito</h4>
+										<p class="card-text">
+											Rum branco, hortelã fresca, limão, açúcar e soda. Uma combinação refrescante e leve para o clima do bistrô.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/negroni.jpg" class="card-img img-fluid" alt="Negroni">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Negroni</h4>
+										<p class="card-text">
+											Gin, vermute rosso e Campari, criando um coquetel com sabor forte, amargo e complexo.
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-4 mb-3">
+								<div class="card h-100 border-0">
+									<img src="images/gin-tônica.jpg" class="card-img img-fluid" alt="Gin tônica">
+									<div class="card-body p-4">
+										<h4 class="card-title mb-4">Gin Tônica com Alecrim e Limão</h4>
+										<p class="card-text">
+											Gin combinado com tônica, finalizado com alecrim fresco e limão, criando uma bebida aromática e super refrescante.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="parallax">
+			<div class="parallax-content">
+				<h3>Onde cada detalhe é feito para você</h3>
+				<p>
+					Celebre momentos especiais com a gente
+				</p>
+			</div>
+		</section>
+
+		<section id="reservations" class="d-flex align-items-center">
+			<div class="row justify-content-center align-items-center mx-auto px-2 p-lg-5">
+				<div class="col-lg-5 p-4 pt-0 p-lg-5 d-flex justify-content-center">
+					<img src="images/reserve-sua-mesa.jpg" class="img-fluid rounded-circle" alt="Mesa de restaurante">
+				</div>
+				<div class="col-lg-5">
+					<h3 class="mb-5 text-center">Reserve sua Mesa</h3>
+					<form>
+						<div class="row justify-content-center">
+							<div class="col-md-5 mb-2 mb-lg-3">
+								<label for="name" class="form-label fs-6 fw-bold">Nome Completo</label>
+								<input type="text" class="form-control p-3" id="name" placeholder="Digite seu nome" required>
+							</div>
+							<div class="col-md-5 mb-2 mb-lg-3">
+								<label for="data" class="form-label fs-6 fw-bold">Data</label>
+								<input type="date" class="form-control p-3" id="data" min="2025-03-01" required>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-md-5 mb-2 mb-lg-3">
+								<label for="e-mail" class="form-label fs-6 fw-bold">Email</label>
+								<input type="email" class="form-control p-3" id="e-mail" placeholder="Digite seu email">
+							</div>
+							<div class="col-md-5 mb-2 mb-lg-3">
+								<label for="telefone" class="form-label fs-6 fw-bold">Telefone</label>
+								<input type="tel" class="form-control p-3" id="telefone" placeholder="(XX) XXXXX-XXXX" maxlength="15">
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<div class="col-5 mb-2 mb-lg-3">
+								<label for="hour" class="form-label fs-6 fw-bold">Hora</label>
+								<select class="form-select" id="hour">
+									<option>18:00</option>
+									<option>19:00</option>
+									<option>20:00</option>
+									<option>21:00</option>
+								</select>
+							</div>
+							<div class="col-5 mb-2 mb-lg-3">
+								<label for="people" class="form-label fs-6 fw-bold">Pessoas</label>
+								<select class="form-select" id="people">
+									<option value="1">1 pessoa</option>
+									<option value="2">2 pessoas</option>
+									<option value="3">3 pessoas</option>
+									<option value="4">4+ pessoas</option>
+								</select>
+							</div>
+						</div>
+						<div class="row justify-content-center">
+							<button type="submit" class="btn mt-4 p-2 rounded">Confirmar Reserva</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+		<section id="events" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
+			<div class="carousel-inner">
+				<div class="carousel-title">
+					<h3 class="mb-5">Agenda de Eventos</h3>
+				</div>
+				<div class="carousel-item active">
+					<img src="images/bg-evento1.jpg" class="d-block w-100" alt="Ambiente de um restaurante">
+					<div class="carousel-caption d-flex align-items-center row">
+						<div class="col-xxl-6 py-4 py-xxl-5 contentEvent">
+							<h4 class="mb-3 mb-lg-4">Noite de Vinho e Queijo</h4>
+							<p class="mb-3 d-none d-md-block">
+								Junte-se a nós para uma noite especial de degustação de vinhos e queijos selecionados.
+								<br class="d-none d-xxl-block">
+								Um evento perfeito para os amantes de gastronomia e bons momentos!
+							</p>
+							<a class="fs-6" href="#home">Veja Detalhes</a>
+						</div>
+						<div class="col-xxl-6 d-flex p-0 imgEvent">
+							<img src="images/vinho-e-queijo.jpg" class="img-fluid w-100" alt="Mesa com queijos e vinho">
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/bg-evento2.jpg" class="d-block w-100" alt="Mesa para um evento especial">
+					<div class="carousel-caption d-flex align-items-center row">
+						<div class="col-xxl-6 py-4 py-xxl-5 contentEvent">
+							<h4 class="mb-3 mb-lg-4">Jantar de Dia dos Namorados</h4>
+							<p class="mb-3 d-none d-md-block">
+								Celebre o amor em grande estilo no Villa Bistrô com um jantar exclusivo, um menu especial e um ambiente acolhedor. Torne a noite ainda mais encantadora e surpreenda a pessoa amada!
+							</p>
+							<a class="fs-6" href="#home">Veja Detalhes</a>
+						</div>
+						<div class="col-xxl-6 d-flex p-0 imgEvent">
+							<img src="images/jantar-romantico.jpg" class="img-fluid w-100" alt="Mesa para um jantar romântico">
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/bg-evento3.jpg" class="d-block w-100" alt="Ambiente de um restaurante">
+					<div class="carousel-caption d-flex align-items-center row">
+						<div class="col-xxl-6 py-4 py-xxl-5 contentEvent">
+							<h4 class="mb-3 mb-lg-4">Sequência de Fondue no Villa</h4>
+							<p class="mb-3 d-none d-md-block">
+								Desfrute de uma noite aconchegante com uma deliciosa sequência de fondue. Queijos, carnes e chocolates, preparados para tornar sua refeição em uma experiência inesquecível!
+							</p>
+							<a class="fs-6" href="#home">Veja Detalhes</a>
+						</div>
+						<div class="col-xxl-6 d-flex p-0 imgEvent">
+							<img src="images/fondue-no-villa.jpg" class="img-fluid w-100" alt="Amigos comendo fondue de queijo">
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Controles do Carrossel-->
+			<button class="carousel-control-prev controles" type="button" data-bs-target="#events" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next controles" type="button" data-bs-target="#events" data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+			<!--Indicadores do Carrossel-->
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#events" data-bs-slide-to="0" class="active" aria-label="Slide 1">
+				</button>
+				<button class="mx-2" type="button" data-bs-target="#events" data-bs-slide-to="1" aria-label="Slide 2">
+				</button>
+				<button type="button" data-bs-target="#events" data-bs-slide-to="2" aria-label="Slide 3">
+				</button>
+			</div>
+		</section>
+
+		<section id="reviews" class="carousel slide" data-bs-ride="carousel" data-bs-interval="9000">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="carousel-caption d-flex align-items-center">
+						<div class="col-md-6 py-5 contentReviews">
+							<img src="images/cliente1.jpg" class="img-fluid mb-4 rounded-circle" alt="Rosto de uma mulher">
+							<h4 class="mb-1">Mariana Pereira</h4>
+							<div class="mb-4">
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+							</div>
+							<p class="mb-3 p-1">
+								"Uma experiência maravilhosa! O ambiente é incrível e a comida é deliciosa. O prato que experimentei estava divino, e o atendimento foi impecável. Com certeza voltarei mais vezes!"
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="carousel-caption d-flex align-items-center">
+						<div class="col-md-6 py-5 contentReviews">
+							<img src="images/cliente2.jpg" class="img-fluid mb-4 rounded-circle" alt=" Rosto de um homem">
+							<h4 class="mb-1">Lucas Moraes</h4>
+							<div class="mb-4">
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+							</div>
+							<p class="mb-3 p-1">
+								"Melhor bistrô da cidade! O menu é diversificado e sempre com pratos frescos e de qualidade. A equipe é super atenciosa, o que torna o ambiente ainda mais agradável. Recomendo a todos!"
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="carousel-caption d-flex align-items-center">
+						<div class="col-md-6 py-5 contentReviews">
+							<img src="images/cliente3.jpg" class="img-fluid mb-4 rounded-circle" alt="Rosto de uma mulher">
+							<h4 class="mb-1">Fernanda Garcia</h4>
+							<div class="mb-4">
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+								<i class="bi bi-star-fill text-warning"></i>
+							</div>
+							<p class="mb-3 p-1">
+								"Fui ao Villa Bistrô para uma comemoração especial e não poderia ter feito escolha melhor. O jantar foi perfeito, e o ambiente aconchegante tornou tudo mais encantador. Adorei a experiência!"
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--Controles do Carrossel-->
+			<button class="carousel-control-prev controles" type="button" data-bs-target="#reviews" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon icone rounded-circle" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next controles" type="button" data-bs-target="#reviews" data-bs-slide="next">
+				<span class="carousel-control-next-icon icone rounded-circle" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+			<!--Indicadores do Carrossel-->
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#reviews" data-bs-slide-to="0" class="active indicador" aria-label="Slide 1">
+				</button>
+				<button type="button" data-bs-target="#reviews" data-bs-slide-to="1" class="indicador" aria-label="Slide 2">
+				</button>
+				<button type="button" data-bs-target="#reviews" data-bs-slide-to="2" class="indicador" aria-label="Slide 3">
+				</button>
+			</div>
+		</section>
+
+		<section id="blog" class="d-flex flex-column justify-content-center">
+			<div class="blog-title">
+				<h3 class="text-center">Blog do Villa</h3>
+				<p class="text-center">Receitas, dicas e novidades diretamente do nosso bistrô.</p>
+			</div>
+			<div class="row container d-flex mx-auto p-5">
+				<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+					<div class="card h-100 border-0">
+						<img src="images/blog1.jpg" class="card-img-top" alt="Chef cozinhando em uma frigideira"/>
+						<div class="card-body d-flex flex-column justify-content-between">
+							<h4 class="card-title mb-4">Segredos do Prato Perfeito</h4>
+							<p class="card-text">
+								Dicas dos chefs para criar pratos únicos, com ingredientes e tempos de preparo que fazem toda a diferença.
+							</p>
+							<a href="#home" class="btn w-50 mt-3">Leia mais</a>
+						</div>
+					</div>
+					<div class="barra"></div>
+				</div>
+				<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+					<div class="card h-100 border-0">
+						<img src="images/blog2.jpg" class="card-img-top" alt="Amigos confraternizando"/>
+						<div class="card-body d-flex flex-column justify-content-between">
+							<h4 class="card-title mb-4">Jantar Ideal para Amigos</h4>
+							<p class="card-text">
+								Surpreenda seus amigos com um jantar delicioso e inesquecível, repleto de sabor e boas vibrações.
+							</p>
+							<a href="#home" class="btn w-50 mt-3">Leia mais</a>
+						</div>
+					</div>
+					<div class="barra"></div>
+				</div>
+				<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
+					<div class="card h-100 border-0">
+						<img src="images/blog3.jpg" class="card-img-top" alt="Entrada do Villa Bistrô"/>
+						<div class="card-body d-flex flex-column justify-content-between">
+							<h4 class="card-title mb-4">O que nos Torna Únicos</h4>
+							<p class="card-text">
+								Em nosso blog, contamos o que torna o Villa Bistrô especial: nossa filosofia culinária e atendimento impecável.
+							</p>
+							<a href="#home" class="btn w-50 mt-3">Leia mais</a>
+						</div>
+					</div>
+					<div class="barra"></div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+	<footer class="d-flex justify-content-center align-items-center">
+		<div class="row justify-content-center py-5">
+			<div id="redes" class="col-md-6 col-xxl-3 mb-5 mb-xxl-0">
+				<h4 class="mb-3 mb-md-4">Villa Bistrô</h4>
+				<p class="mb-3 mb-md-4">Saboreie momentos inesquecíveis conosco. Visite-nos e sinta o sabor da nossa tradição.</p>
+				<a href="#home"><i class="bi bi-instagram text-white"></i></a>
+				<a href="#home"><i class="bi bi-facebook text-white"></i></a>
+				<a href="#home"><i class="bi bi-pinterest text-white"></i></a>
+				<a href="#home"><i class="bi bi-whatsapp text-white"></i></a>
+			</div>
+			<div id="horarios" class="col-md-6 col-lg-5 col-xxl-2 mx-lg-3 mb-5 mb-xxl-0">
+				<h4 class="mb-3 mb-md-4">Horários</h4>
+				<p class="mb-0 d-flex justify-content-between">Segunda <span>11:00 - 23:00</span></p>
+				<p class="mb-0 d-flex justify-content-between">Terça <span>11:00 - 23:00</span></p>
+				<p class="mb-0 d-flex justify-content-between">Quarta <span>11:00 - 23:00</span></p>
+				<p class="mb-0 d-flex justify-content-between">Quinta <span>11:00 - 23:00</span></p>
+				<p class="mb-0 d-flex justify-content-between">Sexta <span>11:00 - 23:00</span></p>
+				<p class="mb-0 d-flex justify-content-between">Sábado <span>11:00 - 23:00</span></p>
+				<p class="mb-0 d-flex justify-content-between">Domingo <span>11:00 - 23:00</span></p>
+			</div>
+			<div id="address" class="col-md-6 col-xxl-3 me-xxl-3 mb-4 mb-md-0 ps-xxl-5">
+				<h4 class="mb-3 mb-md-4">Contato</h4>
+				<div class="mb-3">
+					<i class="bi bi-geo-alt-fill me-2"></i>
+					<p>Rua Exemplo, 123 - Cidade, UF</p>
+				</div>
+				<div class="mb-3">
+					<i class="bi bi-telephone-fill me-2"></i>
+					<p>(12) 3456-7890</p>
+				</div>
+				<div class="mb-3">
+					<i class="bi bi-whatsapp me-2"></i>
+					<p>(12) 34567-8900</p>
+				</div>
+				<div class="mb-3">
+					<i class="bi bi-envelope-fill me-2"></i>
+					<p>contact@site.com</p>
+				</div>
+			</div>
+			<div id="newsletter" class="col-md-6 col-xxl-3 mb-5 mb-md-0">
+				<h4 class="mb-3 mb-md-4">Newsletter</h4>
+				<p>Receba as novidades diretamente no seu email. Assine nossa newsletter!</p>
+				<form>
+					<input type="email" class="form-control mb-2 text-center" placeholder="Digite seu email">
+					<button type="submit" class="btn w-100">Inscreva-se</button>
+				</form>
+			</div>
+		</div>
+		<div class="linha">
+			<hr>
+			<p class=" mt-4 text-center">&copy; Villa Bistrô - Todos os direitos reservados - 2025</p>
+		</div>
+	</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
