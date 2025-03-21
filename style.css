@@ -98,6 +98,12 @@ h3 {
 	filter: invert(1); /* Inverte as cores para tornar o ícone branco */
 }
 
+#home {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+}
+
 .carousel-inner:before {
 	content: '';
 	position: absolute;
@@ -662,12 +668,9 @@ footer hr {
 		min-height: 0.5rem;
 	}
 
-	#home,
 	#about,
 	#cards,
 	#reservations,
-	#events,
-	#reviews,
 	#blog,
 	footer {
 		height: auto;
@@ -747,6 +750,11 @@ footer hr {
 		width: 55%;
 	}
 
+	#events,
+	#events .carousel-inner:before {
+		height: 90vh;
+	}
+
 	#events .carousel-caption,
 	#reviews .carousel-caption {
 		top: 45%;
@@ -776,6 +784,10 @@ footer hr {
 
 	#events .carousel-indicators {
 		bottom: 12vh;
+	}
+
+	#reviews {
+		height: 90vh;
 	}
 
 	#reviews .carousel-caption p {
@@ -855,11 +867,9 @@ footer hr {
 		min-height: 0.6rem;
 	}
 
-	#home,
 	#about,
 	#cards,
 	#reservations,
-	#events,
 	#reviews,
 	#blog,
 	footer {
@@ -901,6 +911,11 @@ footer hr {
 	
 	#reservations button {
 		width: 50%;
+	}
+
+	#events,
+	#events .carousel-inner:before {
+		height: 90vh;
 	}
 
 	#events .carousel-caption {
@@ -1008,11 +1023,9 @@ footer hr {
 		min-height: 0.6rem;
 	}
 
-	#home,
 	#about,
 	#cards,
 	#reservations,
-	#events,
 	#reviews,
 	#blog,
 	footer {
@@ -1053,6 +1066,11 @@ footer hr {
 	
 	#reservations button {
 		width: 45%;
+	}
+
+	#events,
+	#events .carousel-inner:before {
+		height: 90vh;
 	}
 
 	#events .carousel-caption {
@@ -1150,7 +1168,6 @@ footer hr {
 		min-height: 0.6rem;
 	}
 
-	#home,
 	#about,
 	#cards,
 	#reservations,
